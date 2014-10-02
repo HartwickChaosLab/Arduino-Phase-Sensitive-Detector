@@ -158,10 +158,11 @@
 \end{itemize}
 
 \end{frame}
-\frame{
+\begin{frame}
 \frametitle{Why Arduino?}
-
-\begin{itemize}[<+->]
+\begin{columns}[t]
+\column[c]{0.6\textwidth}
+\begin{itemize}
 \item{Cheap}
 \item {Popular}
 \begin{itemize}
@@ -172,8 +173,13 @@
 \item {Perhaps too simple, IDE has very poor debugging tools.}
 \item {Really no debugging tools, except for serial out}
 \end{itemize}
+\item{Works well with Processing, which is a free and powerful language for visualization}
 \end{itemize}
-}
+\column[c]{0.4\textwidth}
+\includegraphics[scale=.25]{Arduino_Uno_-_R3.jpg}
+\end{columns}
+\end{frame}
+
 
 
 \subsection{Background Material}
@@ -201,25 +207,46 @@
 \item\alert{ $V_s$ and $V_r$ have no DC offset}
 \end{itemize}
 \end{exampleblock}
-\normalsize
+
 \end{columns}
 \end{frame}
 
 \section{Is This Even Possible?}
 
-\subsection{Initial Proposal}
 \begin{frame}
-\frametitle{Let's Make a PSD}
-\includegraphics[scale=1.5]{PSD_schematic_phase_schem}
-\end{frame}
-\frame{
-\frametitle{How did it go?}
+\frametitle{What do we need? Can we do it?}
+\begin{columns}
+\column[T]{.5\textwidth}
+\begin{block}{Needed features}
+\begin{enumerate}
 
-}
-\begin{frame}
-\frametitle{Pseudo Code}
-\includegraphics[scale=.2]{PSD_flowchart}
+\item {Generate reference signal.}
+\item {Adjustable phase to maximize signal.}
+\item {Get signal into Arduino}
+\item {Mix signal and reference and filter the results}
+\item {Display results}
+\end{enumerate}
+\end{block}
+\pause
+\column[T]{.5\textwidth}
+\begin{block}{Issues}
+\begin{enumerate}[<+->]
+\item{Arduino has no analog out}
+\item{Shifting phase is difficult to do internally}
+\item{Positive voltages only}
+\item{Limited variable memory on Arduino}
+\item{Need to use serial over USB to Processing}
+\end{enumerate}
+\end{block}
+\end{columns}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Flowchart}
+\includegraphics[scale=.5]{PSD_flowchart1}
+\end{frame}
+
 \subsection{Making it Work}
 
 \begin{frame}
