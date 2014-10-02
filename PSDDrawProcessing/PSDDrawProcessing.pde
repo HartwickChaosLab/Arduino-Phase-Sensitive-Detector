@@ -13,9 +13,11 @@
 //
 //    You should have received a copy of the GNU General Public License
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import processing.serial.*;
 float TC=200.0;
 float x=exp(-1/TC);
+PFont f;
 float a=1-x;
 float b=x;
 
@@ -29,7 +31,7 @@ int mix[];
 float mix_I;
 float mix_Q;
 PFont myFont;
-int fontSize=18;
+
 float phase;
 int choice=0;
 void setup() {
@@ -37,7 +39,7 @@ void setup() {
   background(0);
   // List all the available serial ports
   printArray(Serial.list());
- 
+  f = createFont("Arial",16,true);
   // I know that the first port in the serial list on my Mac
   // is always my  Arduino, so I open Serial.list()[4].
   // Open whatever port is the one you're using (the output
@@ -50,7 +52,7 @@ void setup() {
  myPort=new Serial(this, Serial.list()[1],38400);
  myPort.bufferUntil('\n');
 }
-
+void draw(){}
 
 void serialEvent(Serial myPort) { 
   // read the serial buffer
@@ -65,7 +67,11 @@ void serialEvent(Serial myPort) {
     
      PSD(choice);
   }
-
+           
+void mousePressed()
+{
+  saveFrame("Snap.png");
+}
 void keyReleased()
     {
       if(key=='z'||key=='Z')
@@ -104,37 +110,65 @@ void PSD(int option){
   a=1-x;
   b=x;
   
-   mix_I = map(mix[0], 0,64000,height,0);
-    println("mixI= "+mix_I);
-      mix_Q = map(mix[1], 0,64000,height,0);
+ mix_I = map(mix[0], -10000,10000,height,0);
    
-      if (mix[0]>0){
-      phase=atan(1.*mix[0]/mix[1]);
-      }
-      else{phase=1.;}
-      
-  switch(option){
+     println("mixI= "+mix_I);
+      mix_Q = map(mix[1], -10000,10000,height,0);
+      println("mixQ="+mix_Q);
+      float mag=sqrt(mix_I*mix_Q);
+      if (mix[0]>0)
+      {phase=atan(1.*mix[1]/mix[0])*360/6.42;
+        println("phase= "+phase);}
+     
+switch(option){
    case 0:
      prev_filter=filter_out;
-     filter_out=a*sqrt(mix_I+mix_Q)+b*prev_filter;
-     //println("mag");
+     filter_out=a*mag+b*prev_filter;
+     println("mag");
+     fill(0);
+     noStroke();
+     rect(0,0, width, 100);
+     textFont(f,16);                 // STEP 4 Specify font to be used
+  fill(56);                        // STEP 5 Specify font color 
+  text("Magnitude="+mag,10,100);
+  
      break;
     case 1:
       prev_filter=filter_out;
       filter_out=a*mix_I+b*prev_filter;
-      //println("in phase");
+      println("in phase");
+      fill(0);
+     noStroke();
+     rect(0,0, width, 100);
+     textFont(f,16);                 // STEP 4 Specify font to be used
+  fill(56);                        // STEP 5 Specify font color 
+  text("I="+mix_I,10,100);
       break;
     case 2:
       prev_filter=filter_out;
       filter_out=a*mix_Q+b*prev_filter;
-      //println("Quadature");
+      println("Quadature");
+      fill(0);
+     noStroke();
+     rect(0,0, width, 100);
+     textFont(f,16);                 // STEP 4 Specify font to be used
+  fill(56);                        // STEP 5 Specify font color 
+  text("Q="+mix_Q,10,100);
       break;
     case 3:
       prev_filter=filter_out;
-      filter_out=phase+b*prev_filter;
-      //println("phase");
+      filter_out=a*map(phase,0,360,height,0)+b*prev_filter;
+      println("phase");
+      fill(0);
+     noStroke();
+     rect(0,0, width, 100);
+     textFont(f,16);                 // STEP 4 Specify font to be used
+  fill(56);                        // STEP 5 Specify font color 
+  text("phase="+phase,10,100);
       break;
   }
+
+  
      
   
  drawGraph();
