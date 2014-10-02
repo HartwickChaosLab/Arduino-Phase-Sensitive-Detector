@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="31cm" height="36cm" viewBox="79 -301 604 703" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="120" y="-300" width="160" height="80"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="120" y="-300" width="160" height="80"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="-256.1">
+      <tspan x="200" y="-256.1"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="-270">
+    <tspan x="200" y="-270">Generate Variables</tspan>
+    <tspan x="200" y="-254"></tspan>
+    <tspan x="200" y="-238">Generate Waveform</tspan>
+    <tspan x="200" y="-222"></tspan>
+    <tspan x="200" y="-206"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="120" y="-160" width="160" height="80"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="120" y="-160" width="160" height="80"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="-116.1">
+      <tspan x="200" y="-116.1"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="-123.55">
+    <tspan x="200" y="-123.55">Send Waveform Sample </tspan>
+    <tspan x="200" y="-107.55">to PWM Pin</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="120" y="-20" width="160" height="80"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="120" y="-20" width="160" height="80"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="23.9">
+      <tspan x="200" y="23.9"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="200.107,114 280.213,184 200.107,254 120,184 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="200.107,114 280.213,184 200.107,254 120,184 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200.107" y="187.9">
+      <tspan x="200.107" y="187.9"></tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="280.213,184 280.213,184 380,184 380,-120 289.736,-120 "/>
+    <polygon style="fill: #000000" points="282.236,-120 292.236,-125 289.736,-120 292.236,-115 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="282.236,-120 292.236,-125 289.736,-120 292.236,-115 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="24.45">
+    <tspan x="200" y="24.45">Take Sample at Pin A0</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="203" y="190.45">
+    <tspan x="203" y="190.45">Data Array Filled?</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="320" y="165">
+    <tspan x="320" y="165">No</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="120" y="320" width="160" height="80"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="120" y="320" width="160" height="80"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="363.9">
+      <tspan x="200" y="363.9"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="348.45">
+    <tspan x="200" y="348.45">Mix Data with Ref</tspan>
+    <tspan x="200" y="364.45">Waveform and Send</tspan>
+    <tspan x="200" y="380.45">to Processing</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="200" y1="60" x2="200.037" y2="103.424"/>
+    <polygon style="fill: #000000" points="200.044,110.924 195.035,100.928 200.037,103.424 205.035,100.92 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="200.044,110.924 195.035,100.928 200.037,103.424 205.035,100.92 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="200" y1="260" x2="200" y2="310.264"/>
+    <polygon style="fill: #000000" points="200,317.764 195,307.764 200,310.264 205,307.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="200,317.764 195,307.764 200,310.264 205,307.764 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="120,360 80,360 80,-120 110.264,-120 "/>
+    <polygon style="fill: #000000" points="117.764,-120 107.764,-115 110.264,-120 107.764,-125 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="117.764,-120 107.764,-115 110.264,-120 107.764,-125 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="200" y1="-220" x2="200" y2="-169.736"/>
+    <polygon style="fill: #000000" points="200,-162.236 195,-172.236 200,-169.736 205,-172.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="200,-162.236 195,-172.236 200,-169.736 205,-172.236 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="200" y1="-80" x2="200" y2="-29.7361"/>
+    <polygon style="fill: #000000" points="200,-22.2361 195,-32.2361 200,-29.7361 205,-32.2361 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="200,-22.2361 195,-32.2361 200,-29.7361 205,-32.2361 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="438.875" y="311" width="242.25" height="89"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="438.875" y="311" width="242.25" height="89"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:italic;font-weight:700" x="560" y="343.4">
+      <tspan x="560" y="343.4">Processing</tspan>
+      <tspan x="560" y="359.4"></tspan>
+      <tspan x="560" y="375.4">Low Pass Filtering and Display</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 6; stroke-dasharray: 20; stroke: #000000" x1="280" y1="360" x2="419.162" y2="357.763"/>
+    <polygon style="fill: #000000" points="431.16,357.571 415.291,365.827 419.162,357.763 415.034,349.829 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 6; stroke: #000000" points="431.16,357.571 415.291,365.827 419.162,357.763 415.034,349.829 "/>
+  </g>
+</svg>
