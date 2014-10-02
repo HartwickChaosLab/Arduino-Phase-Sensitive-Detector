@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 OCT 2014 16:07
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 OCT 2014 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1231,7 +1231,7 @@ tiple pdfs with page group included in a single page
 ] [20
 
 ]
-<PSD_flowchart1.pdf, id=776, 513.92pt x 385.44pt>
+<PSD_flowchart1.pdf, id=772, 513.92pt x 385.44pt>
 File: PSD_flowchart1.pdf Graphic file (type pdf)
  <use PSD_flowchart1.pdf>
 Package pdftex.def Info: PSD_flowchart1.pdf used on input line 248.
@@ -1239,7 +1239,7 @@ Package pdftex.def Info: PSD_flowchart1.pdf used on input line 248.
 
 [21
 
- <./PSD_flowchart1.pdf>] <Bitbang.pdf, id=817, 111.75156pt x 64.20242pt>
+ <./PSD_flowchart1.pdf>] <Bitbang.pdf, id=813, 111.75156pt x 64.20242pt>
 File: Bitbang.pdf Graphic file (type pdf)
 
 <use Bitbang.pdf>
@@ -1271,17 +1271,28 @@ l.298 \end{frame}
 ? 
 [23
 
-] [24
+] <cant_sleep.png, id=889, 668.4975pt x 220.4235pt>
+File: cant_sleep.png Graphic file (type png)
+ <use cant_sleep.png>
+Package pdftex.def Info: cant_sleep.png used on input line 305.
+(pdftex.def)             Requested size: 334.24792pt x 110.21147pt.
 
-] [25
+Overfull \hbox (26.95805pt too wide) in paragraph at lines 305--305
+[][]  
+ []
 
-] <Snap.png, id=958, 513.92pt x 256.96pt>
+[24
+
+ <./cant_sleep.png>] [25
+
+] <Snap.png, id=955, 513.92pt x 256.96pt>
 File: Snap.png Graphic file (type png)
- <use Snap.png>
-Package pdftex.def Info: Snap.png used on input line 312.
+
+<use Snap.png>
+Package pdftex.def Info: Snap.png used on input line 315.
 (pdftex.def)             Requested size: 385.43904pt x 192.71951pt.
 
-Overfull \hbox (78.14917pt too wide) in paragraph at lines 312--312
+Overfull \hbox (78.14917pt too wide) in paragraph at lines 315--315
 [][]  
  []
 
@@ -1300,23 +1311,23 @@ Overfull \hbox (78.14917pt too wide) in paragraph at lines 312--312
 \tf@snm=\write8
 \openout8 = `Arduino-PSD-Talk.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
  (./Arduino-PSD-Talk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
 Package rerunfilecheck Info: File `Arduino-PSD-Talk.out' has not changed.
 (rerunfilecheck)             Checksum: D885A3D84B170D421A112DC9EA74D806;446.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
  ) 
 Here is how much of TeX's memory you used:
- 16616 strings out of 493488
- 310228 string characters out of 3141326
- 400111 words of memory out of 3000000
- 19420 multiletter control sequences out of 15000+200000
+ 16600 strings out of 493488
+ 309612 string characters out of 3141326
+ 400029 words of memory out of 3000000
+ 19403 multiletter control sequences out of 15000+200000
  47290 words of font info for 68 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,19n,67p,405b,1123s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,19n,62p,405b,1086s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/tex
@@ -1324,10 +1335,10 @@ live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2012/
 texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Arduino-PSD-Talk.pdf (27 pages, 430799 bytes).
+Output written on Arduino-PSD-Talk.pdf (27 pages, 464244 bytes).
 PDF statistics:
- 1075 PDF objects out of 1200 (max. 8388607)
- 987 compressed objects within 10 object streams
+ 1072 PDF objects out of 1200 (max. 8388607)
+ 985 compressed objects within 10 object streams
  67 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

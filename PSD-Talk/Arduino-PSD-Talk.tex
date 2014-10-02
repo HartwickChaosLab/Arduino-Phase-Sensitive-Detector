@@ -192,21 +192,21 @@
 	    \includegraphics[height=3.2cm]{PSD_block}
 	\column[c]{6.6cm}
 \small	
-	\begin{exampleblock}{Mathematics of PSD}
+	\begin{block}{Mathematics of PSD}
 	
 	\begin{align*}
 	V_{mix}&=V_s V_r \left [ ( \cos\left(\omega_s-\omega_r\right)t-(\phi_s-\phi_r)\right]\\
 	V_o&=A \frac{V_s V_r}{2} \left[ \cos(\phi_s-\phi_r)\right]
 	\end{align*}
 	
-	\end{exampleblock}
+	\end{block}
 
-\begin{exampleblock}{Restrictions}
+\begin{block}{Restrictions}
 \begin{itemize}
 \item $\omega_r=\omega_s$
 \item\alert{ $V_s$ and $V_r$ have no DC offset}
 \end{itemize}
-\end{exampleblock}
+\end{block}
 
 \end{columns}
 \end{frame}
@@ -257,14 +257,14 @@
 	    
 	\column[c]{5cm}
 
-	\begin{exampleblock}{Timers and Interrupts Part I}
+	\begin{block}{Timers and Interrupts Part I}
 	\begin{itemize}
 	\item {The ratio of PWM on to off determines an average ``DC'' signal}
 	\item{When register TCNT1 reaches OCR1A PWM goes low}
 	\item {When TCNTn overflows PWM goes high again}
 	\end{itemize}
 	
-	\end{exampleblock}
+	\end{block}
 \end{columns}
 \end{frame}
 
@@ -275,12 +275,12 @@
 	\vspace{.5cm}
 	    \includegraphics[scale=1.2]{Bitbang}
 	    \vspace{1cm}
-	    \begin{exampleblock}
+	    \begin{block}
 	    $f_{ref}=\frac{\text{TCNT2 rate}}{\text{OCR2A value}\times\text{wavetable length}}$
-	    \end{exampleblock}
+	    \end{block}
 	\column[T]{.5\textwidth}
 
-	\begin{exampleblock}{Timers and Interrupts Part II}
+	\begin{block}{Timers and Interrupts Part II}
 	\begin{itemize}
 	\item {Need fast timer2 and regular timer1, which outputs PWM}
 	\item{When timer2 reaches OCR2A:}
@@ -293,14 +293,17 @@
 	
 	\end{itemize}
 	
-	\end{exampleblock}
+	\end{block}
 \end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Signal Input}
-
+\begin{centering}
+\includegraphics[scale=.5]{cant_sleep.png}
+\end{centering}
 \end{frame}
+
 \begin{frame}
 \frametitle{Phase Manipulation}
 
