@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="673.22833"
+   height="602.36218"
+   viewBox="172 113 380 329"
+   id="svg3105"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="PhaseShift.svg">
+  <metadata
+     id="metadata3185">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3183">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4150"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="927"
+     inkscape:window-height="662"
+     id="namedview3181"
+     showgrid="false"
+     units="cm"
+     inkscape:zoom="0.65077127"
+     inkscape:cx="64.629201"
+     inkscape:cy="301.18109"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3105" />
+  <g
+     id="g3107"
+     transform="translate(0,5.9411688e-4)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="340.5"
+       y1="262.60199"
+       x2="371.034"
+       y2="262.60199"
+       id="line3109" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="340.5"
+       y1="201.534"
+       x2="371.034"
+       y2="201.534"
+       id="line3111" />
+    <polygon
+       style="fill:#ffffff"
+       points="371.034,293.136 371.034,171 477.903,232.068 "
+       id="polygon3113" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="371.034,293.136 371.034,171 477.903,232.068 "
+       id="polygon3115" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="377.14099"
+       y1="262.60199"
+       x2="401.56799"
+       y2="262.60199"
+       id="line3117" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="389.35501"
+       y1="274.81601"
+       x2="389.35501"
+       y2="250.38901"
+       id="line3119" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="377.14099"
+       y1="201.534"
+       x2="401.56799"
+       y2="201.534"
+       id="line3121" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="477.90302"
+       y1="232.06799"
+       x2="508.43799"
+       y2="232.06799"
+       id="line3123" />
+  </g>
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:2"
+     points="324,262 324,301.6 314,306 334,314.8 314,323.6 334,332.4 314,341.2 334,350 324,354.4 324,394 "
+     id="polyline3125"
+     transform="translate(0,5.9411688e-4)" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:2"
+     points="208,202 244.3,202 248.333,192 256.4,212 264.467,192 272.533,212 280.6,192 288.667,212 292.7,202 329,202 "
+     id="polyline3127"
+     transform="translate(0,5.9411688e-4)" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:2"
+     points="339.8,126.073 376.1,126.073 380.133,116.073 388.2,136.073 396.267,116.073 404.333,136.073 412.4,116.073 420.467,136.073 424.5,126.073 460.8,126.073 "
+     id="polyline3129"
+     transform="translate(0,5.9411688e-4)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2"
+     x1="339.79999"
+     y1="126.073"
+     x2="340.5"
+     y2="201.53394"
+     id="line3131" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2"
+     x1="329"
+     y1="201.99976"
+     x2="340.5"
+     y2="201.53394"
+     id="line3133" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2"
+     x1="324"
+     y1="261.99976"
+     x2="340.5"
+     y2="262.60229"
+     id="line3135" />
+  <g
+     id="g3137"
+     transform="translate(0,5.9411688e-4)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="222"
+       y1="263"
+       x2="248.39999"
+       y2="263"
+       id="line3139" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="248.39999"
+       y1="237"
+       x2="248.39999"
+       y2="289"
+       id="line3141" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="261.60001"
+       y1="237"
+       x2="261.60001"
+       y2="289"
+       id="line3143" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="261.60001"
+       y1="263"
+       x2="288"
+       y2="263"
+       id="line3145" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2"
+     x1="288"
+     y1="262.99976"
+     x2="324"
+     y2="261.99976"
+     id="line3147" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:2"
+     points="208,202 203,202 203,263 222.009,263 "
+     id="polyline3149"
+     transform="translate(0,5.9411688e-4)" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:2"
+     points="508.438,232.068 529.438,232.068 529.438,126.073 460.8,126.073 "
+     id="polyline3151"
+     transform="translate(0,5.9411688e-4)" />
+  <g
+     id="g3153"
+     transform="translate(0,5.9411688e-4)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="208"
+       y1="202"
+       x2="185"
+       y2="202"
+       id="line3155" />
+    <path
+       style="fill:#ffffff"
+       d="m 175,202 c 0,-2.5 2.5,-5 5,-5 2.5,0 5,2.5 5,5 0,2.5 -2.5,5 -5,5 -2.5,0 -5,-2.5 -5,-5 z"
+       id="path3157"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 175,202 c 0,-2.5 2.5,-5 5,-5 2.5,0 5,2.5 5,5 0,2.5 -2.5,5 -5,5 -2.5,0 -5,-2.5 -5,-5"
+       id="path3159"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     id="g3161"
+     transform="translate(0,5.9411688e-4)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="508.43799"
+       y1="232.06799"
+       x2="540.00299"
+       y2="231.276"
+       id="line3163" />
+    <path
+       style="fill:#ffffff"
+       d="m 550,231.025 c 0.063,2.499 -2.373,5.061 -4.873,5.124 -2.499,0.063 -5.061,-2.374 -5.124,-4.873 -0.062,-2.499 2.374,-5.061 4.873,-5.124 2.5,-0.063 5.062,2.374 5.124,4.873 z"
+       id="path3165"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 550,231.025 c 0.063,2.499 -2.373,5.061 -4.873,5.124 -2.499,0.063 -5.061,-2.374 -5.124,-4.873 -0.062,-2.499 2.374,-5.061 4.873,-5.124 2.5,-0.063 5.062,2.374 5.124,4.873"
+       id="path3167"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     id="g3169"
+     transform="translate(0,5.9411688e-4)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="324"
+       y1="401"
+       x2="324"
+       y2="421"
+       id="line3171" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="304"
+       y1="421"
+       x2="344"
+       y2="421"
+       id="line3173" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="310.70001"
+       y1="431"
+       x2="337.29999"
+       y2="431"
+       id="line3175" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="317.39999"
+       y1="441"
+       x2="330.60001"
+       y2="441"
+       id="line3177" />
+  </g>
+  <line
+     style="fill:none;stroke:#000000;stroke-width:2"
+     x1="324"
+     y1="393.99976"
+     x2="324"
+     y2="400.99976"
+     id="line3179" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:3.29999997999999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-mid:none;marker-end:url(#Arrow1Mend)"
+     d="m 225.88582,428.72206 82.97846,-66.07544"
+     id="path3187"
+     inkscape:connector-curvature="0"
+     transform="matrix(0.56444446,0,0,0.56444446,172,107.5)" />
+</svg>

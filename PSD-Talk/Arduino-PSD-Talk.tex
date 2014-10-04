@@ -11,7 +11,7 @@
 % The content is otherwise unchanged from the original distributed with the beamer package.
 
 \documentclass{beamer}
-
+\usepackage{hyperref}
 
 %This file is released under (CC BY-SA 4.0) license. See the following website for details http://creativecommons.org/licenses/by-sa/4.0/legalcode
 
@@ -101,10 +101,10 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
-  \tableofcontents
-  % You might wish to add the option [pausesections]
-\end{frame}
+%\begin{frame}{Outline}
+%  \tableofcontents
+%  % You might wish to add the option [pausesections]
+%\end{frame}
 
 
 % Structuring a talk is a difficult task and the following structure
@@ -131,18 +131,17 @@
 \begin{frame}
 \frametitle{Original Goals}
 
-\begin{itemize}[<+->]
+\begin{itemize}%[<+-|alert@+>]
 \item {Use Arduino as a tool for teaching about phase-sensitive detection, like.....}
 \item{To do so with only the Arduino, a computer for display purposes, and passive external components (resistors and capacitors)}
-\pause
-\item {Can be done, but different lessons are learned}
+
 \end{itemize}
 \end{frame}
 
 \subsection{Motivation}
 \begin{frame}
 \frametitle{Why PSD?}
-\begin{itemize}[<+-| alert@+>]
+\begin{itemize}%[<+-| alert@+>]
 \item{Phase Sensitive Detection (PSD) is the basis of many techniques in physics and engineering}
 \begin{itemize}
 \item{Homodyne detection}
@@ -171,12 +170,14 @@
 \item {Simple programming environment}
 \begin{itemize}
 \item {Perhaps too simple, IDE has very poor debugging tools.}
-\item {Really no debugging tools, except for serial out}
 \end{itemize}
 \item{Works well with Processing, which is a free and powerful language for visualization}
 \end{itemize}
 \column[c]{0.4\textwidth}
-\includegraphics[scale=.25]{Arduino_Uno_-_R3.jpg}
+\begin{figure}
+\hspace*{-.75cm}\includegraphics[scale=.25]{Arduino_Uno_-_R3.jpg}\\
+\tiny {Arduino picture from Sparkfun CC-BY-2.0}
+\end{figure}
 \end{columns}
 \end{frame}
 
@@ -213,33 +214,33 @@
 
 \section{Is This Even Possible?}
 
-\begin{frame}
-\frametitle{What do we need? Can we do it?}
-\begin{columns}
-\column[T]{.5\textwidth}
-\begin{block}{Needed features}
-\begin{enumerate}
-
-\item {Generate reference signal.}
-\item {Adjustable phase to maximize signal.}
-\item {Get signal into Arduino}
-\item {Mix signal and reference and filter the results}
-\item {Display results}
-\end{enumerate}
-\end{block}
-\pause
-\column[T]{.5\textwidth}
-\begin{block}{Issues}
-\begin{enumerate}[<+->]
-\item{Arduino has no analog out}
-\item{Shifting phase is difficult to do internally}
-\item{Positive voltages only}
-\item{Limited variable memory on Arduino}
-\item{Need to use serial over USB to Processing}
-\end{enumerate}
-\end{block}
-\end{columns}
-\end{frame}
+%\begin{frame}
+%\frametitle{What do we need? Can we do it?}
+%\begin{columns}
+%\column[T]{.5\textwidth}
+%\begin{block}{Needed features}
+%\begin{enumerate}
+%
+%\item {Generate reference signal.}
+%\item {Adjustable phase to maximize signal.}
+%\item {Get signal into Arduino}
+%\item {Mix signal and reference and filter the results}
+%\item {Display results}
+%\end{enumerate}
+%\end{block}
+%\pause
+%\column[T]{.5\textwidth}
+%\begin{block}{Issues}
+%\begin{enumerate}%[<+->]
+%\item{Arduino has no analog out}
+%\item{Shifting phase is difficult to do internally}
+%\item{Positive voltages only}
+%\item{Limited variable memory on Arduino}
+%\item{Need to use serial over USB to Processing}
+%\end{enumerate}
+%\end{block}
+%\end{columns}
+%\end{frame}
 
 
 \begin{frame}
@@ -248,12 +249,37 @@
 \end{frame}
 
 \subsection{Making it Work}
+\begin{frame}
+\frametitle{Phase Manipulation}
+\begin{columns}[t]
+\column[c]{0.3\textwidth}
+\includegraphics[scale=.2]{PhaseShift}
+
+\column[c]{0.7\textwidth}
+
+\begin{itemize}
+\item {Need to be able to shift phase to maximize signal}
+\item {All-pass phase shifters work, but require a bit more hardware external to Ardunio}
+\item {Software solutions difficult to implement}
+\item {Use two phase detection.}
+	\begin{itemize}
+	\item $V_I=V_s\times \cos(\theta), V_Q=V_s\times\sin(\theta)$
+	\item $R=\sqrt{V_I^2+V_Q^2}$
+	\item $\phi=\tan^{-1}(V_Q/V_I)$
+	\end{itemize}
+\end{itemize}
+
+\end{columns}
+\end{frame}
 
 \begin{frame}
 \frametitle{Creating a Reference Signal}
 \begin{columns}[t]
 	\column[c]{6cm}
-	    \includegraphics[scale=1.25]{Bitbang}
+	\begin{figure}
+	    \includegraphics[scale=1.25]{Bitbang}\\
+	    \tiny{ Picture adapted from J. Thompson, MAKE vol. 35}
+	    \end{figure}
 	    
 	\column[c]{5cm}
 
@@ -261,7 +287,7 @@
 	\begin{itemize}
 	\item {The ratio of PWM on to off determines an average ``DC'' signal}
 	\item{When register TCNT1 reaches OCR1A PWM goes low}
-	\item {When TCNTn overflows PWM goes high again}
+	\item {When TCNT1 overflows PWM goes high again}
 	\end{itemize}
 	
 	\end{block}
@@ -273,8 +299,11 @@
 \begin{columns}[T]
 	\column[T]{.4\textwidth}
 	\vspace{.5cm}
-	    \includegraphics[scale=1.2]{Bitbang}
-	    \vspace{1cm}
+	   \begin{figure}
+	    \includegraphics[scale=1.25]{Bitbang}\\
+	    \tiny {Picture adapted from J. Thompson, MAKE vol. 35}
+	    \end{figure}
+	    \vspace{.3cm}
 	    \begin{block}
 	    $f_{ref}=\frac{\text{TCNT2 rate}}{\text{OCR2A value}\times\text{wavetable length}}$
 	    \end{block}
@@ -293,30 +322,74 @@
 	
 	\end{itemize}
 	
-	\end{block}
+	\end{exampleblock}
 \end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Signal Input}
-\begin{centering}
-\includegraphics[scale=.5]{cant_sleep.png}
-\end{centering}
+\begin{center}
+\hspace*{-.45cm}\includegraphics[scale=.5]{cant_sleep.png}
+\end{center}
 \end{frame}
-
 \begin{frame}
-\frametitle{Phase Manipulation}
+\frametitle{Signal Input}
+\begin{itemize}
+	\item {Arduino can only have positive voltages at its inputs or outputs}
+		\begin{itemize}
+			\item {Integer overflow when mixing}
+			\item {Necessary DC offsets makes phase indefinite}
+		\end{itemize}
+	\item {Need to run ADC as fast as we can so as to to interfere with reference generation.}
+
+		\begin{itemize}
+			\item{Setting pre-scalars and registers can get sampling rates of 50k samples/sec. Not bad for  a 30 board!}
+			\item{ADC has 10 bit resolution with adjustable $V_{ref}$, so resolution on the order of a millivolt is possible}
+		\end{itemize}
+\end{itemize}
 
 \end{frame}
+
+
 
 \begin{frame}
 \frametitle{Display}
-\includegraphics[scale=.75]{Snap.png}
+\begin{columns}
+\column{.5\textwidth}
+\begin{figure}
+\includegraphics[scale=.3]{Snap.png}\\
+In-phase channel as phase is changed
+\end{figure}
+\column{.5\textwidth}
+\includegraphics[scale=.3]{PhaseShift}
+\end{columns}
 \end{frame}
 
 
 
 \section{Conclusions}
+\begin{frame}
+\begin{columns}
+\column[T]{.5\textwidth}
+\begin{block}{What we accomplished}
+\begin{itemize}
+\item {Built and tested a working two-channel phase-sensitive detector}
+\item {Learned techniques that can be used for other micro-processor based instruments}
+\item {Published on github under GPL v3 license}
+\end{itemize}
+\end{block}
+
+\column[T]{.5\textwidth}
+\begin{block}{Still to do}
+\begin{itemize}
+\item {Characterize detector (noise, internal phase shift, etc...)}
+\item {Clean up display}
+\item {Explore other memory options on Arduino}
+\item {Use in an application}
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
 % All of the following is optional and typically not needed. 
 \appendix
 \section<presentation>*{\appendixname}
@@ -327,23 +400,40 @@
     
   \begin{thebibliography}{10}
     
-  \beamertemplatebookbibitems
-  % Start with overview books.
-
-  \bibitem{Author1990}
-    A.~Author.
-    \newblock {\em Handbook of Everything}.
-    \newblock Some Press, 1990.
+%  \beamertemplatebookbibitems
+%  % Start with overview books.
+%
+%  \bibitem{Author1990}
+%    A.~Author.
+%    \newblock {\em Handbook of Everything}.
+%    \newblock Some Press, 1990.
  
     
-  \beamertemplatearticlebibitems
+  \beamertemplateinternetbibitems
   % Followed by interesting articles. Keep the list short. 
-
-  \bibitem{Someone2000}
-    S.~Someone.
-    \newblock On this and that.
-    \newblock {\em Journal of This and That}, 2(1):50--100,
-    2000.
+\small{
+  \bibitem{github2014}
+    The programs!
+    \newblock \url{https://github.com/HartwickChaosLab/Arduino-Phase-Sensitive-Detector}
+   
+   \bibitem{arduino}
+   Arduino
+   \newblock \url{http://www.arduino.cc}
+   
+   \bibitem{Processing}
+   Processing
+   \newblock \url{http://processing.org}
+   
+   \bibitem{measuring stuff}
+   Moding the Arduino ADC
+   \newblock \url{https://sites.google.com/site/measuringstuff/the-arduino}
+   \beamertemplatearticlebibnitems
+ 
+   \bibitem{Make35}
+     J.~Thompson
+     \newblock ``Advanced Arduino Sound Synthesis"
+     \newblock Make Vol. 35 
+     }
   \end{thebibliography}
 \end{frame}
 
