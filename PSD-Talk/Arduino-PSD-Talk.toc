@@ -5,5 +5,5 @@
 \beamer@subsectionintoc {1}{2}{Motivation}{3}{0}{1}
 \beamer@subsectionintoc {1}{3}{Background Material}{5}{0}{1}
 \beamer@sectionintoc {2}{Is This Even Possible?}{6}{0}{2}
-\beamer@subsectionintoc {2}{1}{Making it Work}{7}{0}{2}
-\beamer@sectionintoc {3}{Conclusions}{13}{0}{3}
+\beamer@subsectionintoc {2}{1}{Making it Work}{9}{0}{2}
+\beamer@sectionintoc {3}{Conclusions}{15}{0}{3}
