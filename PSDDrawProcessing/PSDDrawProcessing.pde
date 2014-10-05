@@ -20,7 +20,10 @@ float x=exp(-1/TC);
 PFont f;
 float a=1-x;
 float b=x;
-
+float I_filter_out;
+float Q_filter_out;
+float I_prev_filter;
+float Q_prev_filter;
 int linefeed = 10;      // linefeed in ASCII
 Serial myPort;          // The serial port
 float filter_out = 0;
@@ -115,22 +118,24 @@ void PSD(int option){
      println("mixI= "+mix_I);
       mix_Q = map(mix[1], -10000,10000,height,0);
       println("mixQ="+mix_Q);
-      float mag=sqrt(mix_I*mix_Q);
-      if (mix[0]>0)
-      {phase=atan(1.*mix[1]/mix[0])*360/6.42;
-        println("phase= "+phase);}
+      
+      
      
 switch(option){
    case 0:
-     prev_filter=filter_out;
-     filter_out=a*mag+b*prev_filter;
+   prev_filter=filter_out;
+     I_prev_filter=I_filter_out;
+      Q_prev_filter=Q_filter_out;     
+      I_filter_out=a*mix_I+b*I_prev_filter;
+      Q_filter_out=a*mix_Q+b*Q_prev_filter;
+      filter_out=sqrt(I_filter_out*I_filter_out+Q_filter_out*Q_filter_out);
      println("mag");
      fill(0);
      noStroke();
      rect(0,0, width, 100);
      textFont(f,16);                 // STEP 4 Specify font to be used
   fill(56);                        // STEP 5 Specify font color 
-  text("Magnitude="+mag,10,100);
+  text("Magnitude="+filter_out,10,100);
   
      break;
     case 1:
@@ -142,7 +147,7 @@ switch(option){
      rect(0,0, width, 100);
      textFont(f,16);                 // STEP 4 Specify font to be used
   fill(56);                        // STEP 5 Specify font color 
-  text("I="+mix_I,10,100);
+  text("I="+filter_out,10,100);
       break;
     case 2:
       prev_filter=filter_out;
@@ -153,18 +158,24 @@ switch(option){
      rect(0,0, width, 100);
      textFont(f,16);                 // STEP 4 Specify font to be used
   fill(56);                        // STEP 5 Specify font color 
-  text("Q="+mix_Q,10,100);
+  text("Q="+filter_out,10,100);
       break;
     case 3:
-      prev_filter=filter_out;
-      filter_out=a*map(phase,0,360,height,0)+b*prev_filter;
-      println("phase");
+    prev_filter=filter_out;
+      I_prev_filter=I_filter_out;
+      Q_prev_filter=Q_filter_out;     
+      I_filter_out=a*mix_I+b*I_prev_filter;
+      Q_filter_out=a*mix_Q+b*Q_prev_filter;
+     
+      filter_out=atan(Q_filter_out/I_filter_out)*360/6.42;
+        println("phase= "+filter_out);
+      
       fill(0);
      noStroke();
      rect(0,0, width, 100);
      textFont(f,16);                 // STEP 4 Specify font to be used
   fill(56);                        // STEP 5 Specify font color 
-  text("phase="+phase,10,100);
+  text("phase="+filter_out,10,100);
       break;
   }
 

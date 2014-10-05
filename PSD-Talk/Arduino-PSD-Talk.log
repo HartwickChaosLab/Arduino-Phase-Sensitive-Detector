@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  3 OCT 2014 22:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  4 OCT 2014 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -19,10 +19,10 @@ lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian,
 welsh, loaded.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamer.cls
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasercs.sty
-Package: beamerbasercs 2012/06/01 (rcs-revision 352157baec3a)
+Package: beamerbasercs 2013/01/04 (rcs-revision 9a97a4eee358)
 )
-Document Class: beamer 2011/09/12 development version 3.20 A class for typesett
-ing presentations (rcs-revision 70f9d8411e54)
+Document Class: beamer 2013/01/04 3.26 A class for typesetting presentations (r
+cs-revision e81e0c94bcc6)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 Package: beamerbasemodes 2012/04/15 (rcs-revision cc6557182d97)
 \beamer@tempbox=\box26
@@ -473,22 +473,19 @@ Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
 y
 Package: beamerbasecompatibility 2012/05/01  (rcs-revision 67c48b3b652d)
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasefont.sty
-Package: beamerbasefont 2012/05/10  (rcs-revision a0b4f9f91ee9)
+Package: beamerbasefont 2012/09/19  (rcs-revision 733629cd0c6c)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2009/06/22 v3.00
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks23
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
-Package: sansmathaccent 2012/04/26
-))
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 Package: beamerbasetranslator 2010/06/11  (rcs-revision 85fd1cc7fc42)
 
@@ -504,7 +501,7 @@ Package: beamerbasemisc 2012/02/24  (rcs-revision 2ff5461be705)
 Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
-Package: beamerbaseoverlay 2012/04/03  (rcs-revision 45744d9ae88b)
+Package: beamerbaseoverlay 2012/11/11  (rcs-revision 6afbc49b1109)
 \beamer@argscount=\count126
 \beamer@lastskipcover=\skip44
 \beamer@trivlistdepth=\count127
@@ -513,7 +510,7 @@ Package: beamerbaseoverlay 2012/04/03  (rcs-revision 45744d9ae88b)
 Package: beamerbasetitle 2010/09/21  (rcs-revision f0446ed0b6ae)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasesection.sty
-Package: beamerbasesection 2012/05/30  (rcs-revision 22ff49def670)
+Package: beamerbasesection 2013/01/04  (rcs-revision 54309ceef997)
 \c@lecture=\count128
 \c@part=\count129
 \c@section=\count130
@@ -521,7 +518,7 @@ Package: beamerbasesection 2012/05/30  (rcs-revision 22ff49def670)
 \c@subsubsection=\count132
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
-Package: beamerbaseframe 2012/05/31  (rcs-revision 5fc3b3dbfeba)
+Package: beamerbaseframe 2012/12/26  (rcs-revision 1443917db2cf)
 \beamer@framebox=\box40
 \beamer@frametitlebox=\box41
 \beamer@zoombox=\box42
@@ -534,33 +531,34 @@ Package: beamerbaseframe 2012/05/31  (rcs-revision 5fc3b3dbfeba)
 \beamer@frametopskipautobreak=\skip47
 \beamer@framebottomskipautobreak=\skip48
 \beamer@envbody=\toks24
+\framewidth=\dimen165
 \c@framenumber=\count136
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
-Package: beamerbaseverbatim 2011/09/12  (rcs-revision 70f9d8411e54)
+Package: beamerbaseverbatim 2012/08/30  (rcs-revision dfdb135076b3)
 \beamer@verbatimfileout=\write4
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
 Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
 \beamer@splitbox=\box43
 \beamer@autobreakcount=\count137
-\beamer@autobreaklastheight=\dimen165
+\beamer@autobreaklastheight=\dimen166
 \beamer@frametitletoks=\toks25
 \beamer@framesubtitletoks=\toks26
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
 sty
-Package: beamerbaseframecomponents 2012/03/07  (rcs-revision 9f094699ce15)
+Package: beamerbaseframecomponents 2012/09/13  (rcs-revision dcd846607320)
 \beamer@footins=\box44
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
 Package: beamerbasecolor 2010/06/06  (rcs-revision d1a9b48be06d)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
-Package: beamerbasenotes 2010/05/01  (rcs-revision efa082c6111d)
+Package: beamerbasenotes 2012/12/19  (rcs-revision 1686da3db3c9)
 \beamer@frameboxcopy=\box45
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
-Package: beamerbasetoc 2012/02/28  (rcs-revision 138681b92320)
+Package: beamerbasetoc 2012/10/02  (rcs-revision 5ed0f4010e8a)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
 Package: beamerbasetemplates 2010/05/01  (rcs-revision efa082c6111d)
@@ -575,16 +573,16 @@ Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
 \bmb@boxshadow=\box48
 \bmb@boxshadowball=\box49
 \bmb@boxshadowballlarge=\box50
-\bmb@temp=\dimen166
-\bmb@dima=\dimen167
-\bmb@dimb=\dimen168
-\bmb@prevheight=\dimen169
+\bmb@temp=\dimen167
+\bmb@dima=\dimen168
+\bmb@dimb=\dimen169
+\bmb@prevheight=\dimen170
 )
-\beamer@blockheadheight=\dimen170
+\beamer@blockheadheight=\dimen171
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
 ty
-Package: beamerbaselocalstructure 2012/05/25  (rcs-revision 5ff5e8ed7c0e)
+Package: beamerbaselocalstructure 2012/11/13  (rcs-revision ddfba79dac19)
  (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks28
@@ -596,13 +594,13 @@ Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
 Package: beamerbasenavigation 2012/04/03  (rcs-revision 42a0f21a412d)
-\beamer@section@min@dim=\dimen171
+\beamer@section@min@dim=\dimen172
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
 Package: beamerbasetheorems 2010/06/06  (rcs-revision 7e7cc5e53e9d)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
@@ -612,30 +610,30 @@ Package: amstext 2000/06/29 v2.01
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks29
-\ex@=\dimen172
+\ex@=\dimen173
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen173
+\pmbraise@=\dimen174
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count140
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count141
 \leftroot@=\count142
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count143
 \DOTSCASE@=\count144
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box51
 \strutbox@=\box52
-\big@size=\dimen174
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\big@size=\dimen175
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count145
 \c@MaxMatrixCols=\count146
 \dotsspace@=\muskip11
@@ -646,21 +644,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \column@=\count150
 \maxfields@=\count151
 \andhelp@=\toks31
-\eqnshift@=\dimen175
-\alignsep@=\dimen176
-\tagshift@=\dimen177
-\tagwidth@=\dimen178
-\totwidth@=\dimen179
-\lineht@=\dimen180
+\eqnshift@=\dimen176
+\alignsep@=\dimen177
+\tagshift@=\dimen178
+\tagwidth@=\dimen179
+\totwidth@=\dimen180
+\lineht@=\dimen181
 \@envbody=\toks32
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks33
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks34
 \thm@bodyfont=\toks35
 \thm@headfont=\toks36
@@ -682,21 +680,21 @@ Package: beamerthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/font/beamerfontthem
 edefault.sty
-Package: beamerfontthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+Package: beamerfontthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emedefault.sty
-Package: beamercolorthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+Package: beamercolorthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
 emedefault.sty
 Package: beamerinnerthemedefault 2012/05/01  (rcs-revision 67c48b3b652d)
-\beamer@dima=\dimen181
-\beamer@dimb=\dimen182
+\beamer@dima=\dimen182
+\beamer@dimb=\dimen183
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
 emedefault.sty
-Package: beamerouterthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeWa
 rsaw.sty
@@ -712,7 +710,7 @@ Package: beamerouterthemeshadow 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
 emesplit.sty
-Package: beamerouterthemesplit 2010/06/17  (rcs-revision d02a7cf4d8ae)
+Package: beamerouterthemesplit 2012/10/16  (rcs-revision 51a8c72084af)
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emeorchid.sty
@@ -731,7 +729,7 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 LaTeX Info: Redefining \textlatin on input line 82.
 \babel@savecnt=\count153
-\U@D=\dimen183
+\U@D=\dimen184
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -967,6 +965,14 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
 (./Arduino-PSD-Talk.aux)
+Runaway argument?
+{\headcommand {\beamer@sectionpages {6} 
+./Arduino-PSD-Talk.tex:98: File ended while scanning use of \@writefile.
+<inserted text> 
+                \par 
+l.98 \begin{document}
+                     
+? 
 \openout1 = `Arduino-PSD-Talk.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -984,7 +990,6 @@ LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 98.
-
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -1025,13 +1030,13 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count154
-\scratchdimen=\dimen184
+\scratchdimen=\dimen185
 \scratchbox=\box53
 \nofMPsegments=\count155
 \nofMParguments=\count156
 \everyMPshowfont=\toks42
 \MPscratchCnt=\count157
-\MPscratchDim=\dimen185
+\MPscratchDim=\dimen186
 \MPnumerator=\count158
 \makeMPintoPDFobject=\count159
 \everyMPtoPDFconversion=\toks43
@@ -1147,129 +1152,118 @@ updmap/pdftex.map}
 ] [3
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 182.
+LaTeX Font Info:    Try loading font information for U+msa on input line 183.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 182.
+LaTeX Font Info:    Try loading font information for U+msb on input line 183.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
 
-<Arduino_Uno_-_R3.jpg, id=172, 602.25pt x 602.25pt>
+<Arduino_Uno_-_R3.jpg, id=142, 602.25pt x 602.25pt>
 File: Arduino_Uno_-_R3.jpg Graphic file (type jpg)
  <use Arduino_Uno_-_R3.jpg>
-Package pdftex.def Info: Arduino_Uno_-_R3.jpg used on input line 182.
+Package pdftex.def Info: Arduino_Uno_-_R3.jpg used on input line 183.
 (pdftex.def)             Requested size: 150.56212pt x 150.56212pt.
 
-Overfull \hbox (6.3085pt too wide) in paragraph at lines 182--182
+Overfull \hbox (6.3085pt too wide) in paragraph at lines 183--183
  | [] 
  []
 
 [4
 
  <./Arduino_Uno_-_R3.jpg>]
-<PSD_block.pdf, id=206, 355.65945pt x 250.38426pt>
+<PSD_block.pdf, id=176, 355.65945pt x 250.38426pt>
 File: PSD_block.pdf Graphic file (type pdf)
  <use PSD_block.pdf>
-Package pdftex.def Info: PSD_block.pdf used on input line 213.
+Package pdftex.def Info: PSD_block.pdf used on input line 214.
 (pdftex.def)             Requested size: 129.3289pt x 91.04872pt.
 
-Overfull \hbox (1.2915pt too wide) in paragraph at lines 213--213
+Overfull \hbox (1.2915pt too wide) in paragraph at lines 214--214
 [][]  
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 213.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 214.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 213.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 214.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 213.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 214.
 [5
 
  <./PSD_block.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./PSD_block.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
->] <PSD_flowchart1.pdf, id=256, 513.92pt x 385.44pt>
+>] <PSD_flowchart1.pdf, id=227, 513.92pt x 385.44pt>
 File: PSD_flowchart1.pdf Graphic file (type pdf)
  <use PSD_flowchart1.pdf>
-Package pdftex.def Info: PSD_flowchart1.pdf used on input line 249.
+Package pdftex.def Info: PSD_flowchart1.pdf used on input line 250.
 (pdftex.def)             Requested size: 256.95937pt x 192.71953pt.
 
 [6
 
- <./PSD_flowchart1.pdf>] <PhaseShift.pdf, id=299, 540.60233pt x 483.69682pt>
+ <./PSD_flowchart1.pdf>] <PhaseShift.pdf, id=271, 540.60233pt x 483.69682pt>
 File: PhaseShift.pdf Graphic file (type pdf)
 
 <use PhaseShift.pdf>
-Package pdftex.def Info: PhaseShift.pdf used on input line 273.
+Package pdftex.def Info: PhaseShift.pdf used on input line 274.
 (pdftex.def)             Requested size: 108.11855pt x 96.73764pt.
 
-Overfull \hbox (15.93065pt too wide) in paragraph at lines 273--273
+Overfull \hbox (15.93065pt too wide) in paragraph at lines 274--274
 [][]  
  []
 
 [7
 
- <./PhaseShift.pdf>] <Bitbang.pdf, id=337, 111.75156pt x 64.20242pt>
+ <./PhaseShift.pdf>] <Bitbang.pdf, id=310, 111.75156pt x 64.20242pt>
 File: Bitbang.pdf Graphic file (type pdf)
 
 <use Bitbang.pdf>
-Package pdftex.def Info: Bitbang.pdf used on input line 295.
+Package pdftex.def Info: Bitbang.pdf used on input line 296.
 (pdftex.def)             Requested size: 139.68907pt x 80.2528pt.
  [8
 
  <./Bitbang.pdf>]
 File: Bitbang.pdf Graphic file (type pdf)
  <use Bitbang.pdf>
-Package pdftex.def Info: Bitbang.pdf used on input line 327.
+Package pdftex.def Info: Bitbang.pdf used on input line 328.
 (pdftex.def)             Requested size: 139.68907pt x 80.2528pt.
 
-Overfull \hbox (16.77501pt too wide) in paragraph at lines 327--327
+Overfull \hbox (16.77501pt too wide) in paragraph at lines 328--328
  [] 
  []
 
-./Arduino-PSD-Talk.tex:327: Missing $ inserted.
+./Arduino-PSD-Talk.tex:328: Missing $ inserted.
 <inserted text> 
                 $
-l.327 \end{frame}
+l.328 \end{frame}
                  
 ? 
-./Arduino-PSD-Talk.tex:327: Missing $ inserted.
+./Arduino-PSD-Talk.tex:328: Missing $ inserted.
 <inserted text> 
                 $
-l.327 \end{frame}
-                 
-? 
-
-./Arduino-PSD-Talk.tex:327: LaTeX Error: \begin{block} on input line 327 ended 
-by \end{exampleblock}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 \end{frame}
+l.328 \end{frame}
                  
 ? 
 [9
 
-] <cant_sleep.png, id=414, 668.4975pt x 220.4235pt>
+] <cant_sleep.png, id=387, 668.4975pt x 220.4235pt>
 File: cant_sleep.png Graphic file (type png)
  <use cant_sleep.png>
-Package pdftex.def Info: cant_sleep.png used on input line 334.
+Package pdftex.def Info: cant_sleep.png used on input line 335.
 (pdftex.def)             Requested size: 334.24792pt x 110.21147pt.
 
-Overfull \hbox (14.1544pt too wide) in paragraph at lines 334--334
+Overfull \hbox (14.1544pt too wide) in paragraph at lines 335--335
  | [] 
  []
 
@@ -1277,23 +1271,23 @@ Overfull \hbox (14.1544pt too wide) in paragraph at lines 334--334
 
  <./cant_sleep.png>] [11
 
-] <Snap.png, id=479, 513.92pt x 256.96pt>
+] <Snap.png, id=451, 513.92pt x 256.96pt>
 File: Snap.png Graphic file (type png)
 
 <use Snap.png>
-Package pdftex.def Info: Snap.png used on input line 366.
+Package pdftex.def Info: Snap.png used on input line 367.
 (pdftex.def)             Requested size: 154.17719pt x 77.0886pt.
 
-Overfull \hbox (0.53226pt too wide) in paragraph at lines 366--366
+Overfull \hbox (0.53226pt too wide) in paragraph at lines 367--367
  [] 
  []
 
 File: PhaseShift.pdf Graphic file (type pdf)
 <use PhaseShift.pdf>
-Package pdftex.def Info: PhaseShift.pdf used on input line 366.
+Package pdftex.def Info: PhaseShift.pdf used on input line 367.
 (pdftex.def)             Requested size: 162.18195pt x 145.11015pt.
 
-Overfull \hbox (8.53702pt too wide) in paragraph at lines 366--366
+Overfull \hbox (8.53702pt too wide) in paragraph at lines 367--367
 [][]  
  []
 
@@ -1302,20 +1296,20 @@ Overfull \hbox (8.53702pt too wide) in paragraph at lines 366--366
  <./Snap.png (PNG copy)>] [13
 
 ]
-./Arduino-PSD-Talk.tex:438: Undefined control sequence.
+./Arduino-PSD-Talk.tex:439: Undefined control sequence.
 <inserted text> ...beamertemplateinternetbibitems 
                                                   \small { \bibitem {github2...
-l.438 \end{frame}
+l.439 \end{frame}
                  
 ? 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 438.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 439.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-./Arduino-PSD-Talk.tex:438: Undefined control sequence.
+./Arduino-PSD-Talk.tex:439: Undefined control sequence.
 <inserted text> ...beamertemplatearticlebibnitems 
                                                   \par \bibitem {Make35} J.~...
-l.438 \end{frame}
+l.439 \end{frame}
                  
 ? 
 [14
@@ -1331,40 +1325,47 @@ l.438 \end{frame}
 \tf@snm=\write8
 \openout8 = `Arduino-PSD-Talk.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
  (./Arduino-PSD-Talk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 440.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
-Package rerunfilecheck Info: File `Arduino-PSD-Talk.out' has not changed.
-(rerunfilecheck)             Checksum: C3DDFE37FE2C7A2C93270AF6E5C3B50F;444.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 441.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 441.
+
+
+Package rerunfilecheck Warning: File `Arduino-PSD-Talk.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Arduino-PSD-Talk.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  C3DDFE37FE2C7A2C93270AF6E5C3B50F;444.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 441.
  ) 
 Here is how much of TeX's memory you used:
- 16562 strings out of 493488
- 308270 string characters out of 3141326
- 389639 words of memory out of 3000000
- 19383 multiletter control sequences out of 15000+200000
+ 16563 strings out of 493488
+ 308389 string characters out of 3141326
+ 390331 words of memory out of 3000000
+ 19389 multiletter control sequences out of 15000+200000
  47848 words of font info for 70 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,19n,62p,426b,1041s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Navigation15} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/texmf-
-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/fo
-nts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Arduino-PSD-Talk.pdf (14 pages, 451282 bytes).
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/texm
+f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/
+fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Arduino-PSD-Talk.pdf (14 pages, 450863 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 45 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 542 compressed objects within 6 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
