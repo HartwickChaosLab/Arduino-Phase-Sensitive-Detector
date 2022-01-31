@@ -46,7 +46,7 @@
 
 const int syncPin = 8;
 //const int myINPUT = 0;
-const int myINPUT = 2;    //OctoUNO J1Pin1 input wire White/Orange
+const int myINPUT = A2;    //OctoUNO J1Pin1 input wire White/Orange
 
 byte wave_I[LENGTH];
 byte wave_Q[LENGTH];
@@ -78,9 +78,9 @@ void setup() {
   cbi(ADCSRA, ADPS0) ;
 #endif
 
-  Serial.begin(19200); //run serial to processing as fast as we can
+  //Serial.begin(19200); //run serial to processing as fast as we can
   //Serial.begin(38400); //run serial to processing as fast as we can
-  //Serial.begin(115200); ////FLE Make Faster
+  Serial.begin(115200); ////FLE Make Faster
 
 
   // Create reference signal

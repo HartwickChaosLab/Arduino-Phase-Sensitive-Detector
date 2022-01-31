@@ -58,101 +58,33 @@ boolean gotString = false;  //Flag for the serial event
 void setup() {
   size(512, 256);
   background(0);
+  stroke(0, 255, 100);    //Line color
   // List all the available serial ports
   printArray(Serial.list());
   f = createFont("Arial", 16, true);
+
   // I know that the first port in the serial list on my Mac
   // is always my  Arduino, so I open Serial.list()[4].
   // Open whatever port is the one you're using (the output
   // of Serial.list() can help; the are listed in order
   // starting with the one that corresponds to [4]).
-
-
   // read bytes into a buffer until you get a linefeed (ASCII 10):
-
-  myPort=new Serial(this, Serial.list()[6], 19200);
+  //myPort=new Serial(this, Serial.list()[6], 19200);
   //myPort=new Serial(this, Serial.list()[6], 38400);
-  //myPort=new Serial(this, Serial.list()[6],115200);        //FLE Make Faster
+  myPort=new Serial(this, Serial.list()[6],115200);        //FLE Make Faster
   myPort.bufferUntil('\n');
+  
 }// end setup()
 
 void draw() {
-
   if (gotString == true) {
     mix = int(split(myString, ','));     // split the string at the commas // and convert the sections into integers:
     PSD(choice);        //Draw the PSD
   }
-
   line(graphPosition-1, prev_filter, graphPosition, filter_out);
 }
 
-void serialEvent(Serial myPort) { 
-  // read the serial buffer
-  myString = myPort.readStringUntil('\n');
-  if (myString != null) {
-    myString = trim(myString);      // if you got any bytes other than the linefeed:
-    gotString = true; 
-    //mix = int(split(myString, ','));     // split the string at the commas // and convert the sections into integers:
-    //PSD(choice);        //Draw the PSD
-  }// end not null
-}// end serialEvent()
 
-void mousePressed()
-{
-  saveFrame("Snap.png");
-  if (mouseButton == LEFT) {  
-    println("Left pressed.");
-  } else if (mouseButton == RIGHT) {
-    background(0);      //FLE lets not erase.
-    graphPosition=0;
-    println("Right pressed.");
-  } else if (mouseButton == CENTER) {
-    println("Center pressed.\n");    
-  } else {  
-    println("Mouse but no button.\n");
-    // No action
-  }
-}
-
-/*  Key  Action
- z    decress TC
- x    increase TC
- i    Inphase
- m    Magnatude
- p    Phase
- q    Quadrature
- 
- */
-
-void keyReleased()
-{
-  if (key=='z'||key=='Z')
-  {
-    TC--;
-    println(TC);
-  }
-  if (key=='x'||key=='X')
-  {
-    TC++;
-    println(TC);
-  }  
-  if (key=='i'||key=='I')
-  {
-    choice=1;
-  }
-  if (key=='m'||key=='M')
-  {
-    choice=0;
-  }
-  if (key=='p'||key=='P')
-  {
-    choice=3;
-  }
-  if (key=='q'||key=='Q')
-  {
-    choice=2;
-  }
-}// end keyrelease() 
 
 //Draw the PSD to the window.
 void PSD(int option) {
@@ -176,10 +108,11 @@ void PSD(int option) {
     println("mag");
     fill(0);
     noStroke();
-    rect(0, 0, width, 100);
+    rect(0, 0, width/2, 20);
     textFont(f, 16);                 // STEP 4 Specify font to be used
-    fill(56);                        // STEP 5 Specify font color 
-    text("Magnitude="+filter_out, 10, 100);
+    stroke(255, 100, 0);    //Line color
+    fill(156);                        // STEP 5 Specify font color 
+    text("Magnitude="+filter_out, 10, 20);
 
     break;
   case 1:
@@ -188,10 +121,11 @@ void PSD(int option) {
     println("in phase");
     fill(0);
     noStroke();
-    rect(0, 0, width, 100);
+    rect(0, 0, width, 20);
     textFont(f, 16);                 // STEP 4 Specify font to be used
     fill(56);                        // STEP 5 Specify font color 
-    text("I="+filter_out, 10, 100);
+    text("I="+filter_out, 10, 20);
+    stroke(0, 100, 255);    //Line color
     break;
   case 2:
     prev_filter=filter_out;
@@ -199,10 +133,11 @@ void PSD(int option) {
     println("Quadature");
     fill(0);
     noStroke();
-    rect(0, 0, width, 100);
+    rect(0, 0, width, 20);
     textFont(f, 16);                 // STEP 4 Specify font to be used
     fill(56);                        // STEP 5 Specify font color 
-    text("Q="+filter_out, 10, 100);
+    text("Q="+filter_out, 10, 20);
+    stroke(0, 255, 100);    //Line color
     break;
   case 3:
     prev_filter=filter_out;
@@ -216,22 +151,24 @@ void PSD(int option) {
 
     fill(0);
     noStroke();
-    rect(0, 0, width, 100);
+    rect(0, 0, width, 20);
     textFont(f, 16);                 // STEP 4 Specify font to be used
     fill(56);                        // STEP 5 Specify font color 
-    text("phase="+filter_out, 10, 100);
+    text("phase="+filter_out, 10, 20);
+    stroke(1000, 255, 0);    //Line color
     break;
   }
 
   drawGraph();
-  myPort.write("A"); 
+  myPort.write("A"); //Tell Arduino UNO to start another aquizition.
   // println(filter_out);
 }// end PSD()
 
+/*Graph the data*/
 void drawGraph() {
   smooth();
   fill(20);
-  stroke(0, 255, 100);
+//  stroke(0, 255, 100);    //Line color
   strokeWeight(2);
 
   line(graphPosition-1, prev_filter, graphPosition, filter_out);
@@ -240,7 +177,6 @@ void drawGraph() {
     graphPosition=0;
     //    background(0);      //FLE lets not erase.
   } else {
-
     graphPosition++;
   }
 }//end drawGraph()
