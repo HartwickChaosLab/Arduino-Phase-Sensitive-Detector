@@ -38,11 +38,12 @@
 //Change variable types for sin/cos function table.
 // 20220131 /Move sine and cosine into PROGMEM
 // 20220201 Clean up comments
+// Mul by 7.8125 to make mV.
 
 #include <avr/interrupt.h>
 
 #define PI2 6.283185
-int OFFSET = 128;
+const int TABLE_OFFSET = 128;
 
 //const int inputOFFSET = 1024/2;       //Theoritical input mid point.
 const int inputOFFSET = 2.39 * 1023 / 4.80; //Measured on Resistive devider input FLE 20220201
@@ -54,7 +55,8 @@ const int syncPin = 8;
 //const int myINPUT = 0;
 const int myINPUT = A2;    //OctoUNO J1Pin1 input wire White/Orange
 
-//Sine and cosine tabel of length = LENGTH = 256
+//ToDo make the sine and cosine 10bit resolution. Remove offset from table.
+//Sine and cosine table of length = LENGTH = 256. Sine and cosine offset by 128. Range is 0-256.
 const static int16_t PROGMEM wave_I[] = {
   255, 254, 254, 254, 254, 254, 253, 253, 252, 251, 251, 250, 249, 248, 247, 246, 245, 244, 242, 241, 240, 238, 236, 235, 233, 231, 230, 228, 226, 224, 222, 219, 217, 215, 213, 210, 208, 206, 203, 201, 198, 195, 193, 190, 187, 185, 182, 179, 176, 173, 170, 167, 164, 161, 158, 155, 152, 149, 146, 143, 140, 137, 134, 131, 128, 124, 121, 118, 115, 112, 109, 106, 103, 100, 97, 94, 91, 88, 85, 82, 79, 76, 73, 70, 68, 65, 62, 60, 57, 54, 52, 49, 47, 45, 42, 40, 38, 36, 33, 31, 29, 27, 25, 24, 22, 20, 19, 17, 15, 14, 13, 11, 10, 9, 8, 7, 6, 5, 4, 4, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 17, 19, 20, 22, 24, 25, 27, 29, 31, 33, 36, 38, 40, 42, 45, 47, 49, 52, 54, 57, 60, 62, 65, 68, 70, 73, 76, 79, 82, 85, 88, 91, 94, 97, 100, 103, 106, 109, 112, 115, 118, 121, 124, 128, 131, 134, 137, 140, 143, 146, 149, 152, 155, 158, 161, 164, 167, 170, 173, 176, 179, 182, 185, 187, 190, 193, 195, 198, 201, 203, 206, 208, 210, 213, 215, 217, 219, 222, 224, 226, 228, 230, 231, 233, 235, 236, 238, 240, 241, 242, 244, 245, 246, 247, 248, 249, 250, 251, 251, 252, 253, 253, 254, 254, 254, 254, 254
 };
@@ -126,6 +128,7 @@ void loop() {
     mixI and mixQ = 128
     2.5*128 = 320
     Mul by 0.0078125 to make volts.
+    Mul by 7.8125 to make mV.
   */
 
   if ((index >= LENGTH - 1) & (Serial.available() > 0)) // We have a filled array and S port available.
@@ -135,10 +138,10 @@ void loop() {
     {
       //Serial.print(wave_I[i]);
       //Serial.print(',');
-      hold = ((signal[i] - inputOFFSET) * 5.0 / 1023.0) * 1 * (int(pgm_read_word_near(wave_I + i)) - 1 * OFFSET) ;
+      hold = ((signal[i] - inputOFFSET) * 5.0 / 1023.0) * 7.8125 * (int(pgm_read_word_near(wave_I + i)) - 1 * TABLE_OFFSET) ;
       Serial.print(hold);//send in-phase mix
       Serial.print(',');
-      hold = ((signal[i] - inputOFFSET) * 5.0 / 1023.0) * 1 * (int(pgm_read_word_near(wave_Q + i)) - 1 * OFFSET) ;
+      hold = ((signal[i] - inputOFFSET) * 5.0 / 1023.0) * 7.8125 * (int(pgm_read_word_near(wave_Q + i)) - 1 * TABLE_OFFSET) ;
       Serial.println(hold);//send out-of-phase mix
     }// end FOR
   }
