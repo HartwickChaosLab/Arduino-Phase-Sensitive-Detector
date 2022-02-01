@@ -33,6 +33,8 @@
 
 void keyReleased()
 {
+  //println("key: "+key+" keyCode: "+keyCode);  //For key development
+  
   if (key=='z'||key=='Z')
   {
     TC--;
@@ -59,6 +61,12 @@ void keyReleased()
   {
     choice=2;
   }
+  if (key==' ')
+  {
+    background(0);
+    graphPosition=0;
+  }
+
 }// end keyrelease() 
 
 

@@ -29,7 +29,12 @@
  */
 
 import processing.serial.*;
-float TC=200.0;
+//float TC=200.0;
+//float TC=100.0;
+//float TC=50.0;
+//float TC=5.0;
+float TC=1.0;
+
 float x=exp(-1/TC);
 PFont f;
 float a=1-x;
@@ -54,6 +59,7 @@ int choice=0;
 
 String myString ="";
 boolean gotString = false;  //Flag for the serial event  
+int totalNumber = 0;
 
 void setup() {
   size(512, 256);
@@ -71,13 +77,16 @@ void setup() {
   // read bytes into a buffer until you get a linefeed (ASCII 10):
   //myPort=new Serial(this, Serial.list()[6], 19200);
   //myPort=new Serial(this, Serial.list()[6], 38400);
+//  myPort=new Serial(this, Serial.list()[5],115200);        //FLE Make Faster
   myPort=new Serial(this, Serial.list()[6],115200);        //FLE Make Faster
+  //myPort=new Serial(this, Serial.list()[7],115200);        //FLE Make Faster
   myPort.bufferUntil('\n');
   
 }// end setup()
 
 void draw() {
   if (gotString == true) {
+    totalNumber++;
     mix = int(split(myString, ','));     // split the string at the commas // and convert the sections into integers:
     PSD(choice);        //Draw the PSD
   }
@@ -92,10 +101,13 @@ void PSD(int option) {
   a=1-x;
   b=x;
 
-  mix_I = map(mix[0], -10000, 10000, height, 0);
-  println("mixI= "+mix_I);
-  mix_Q = map(mix[1], -10000, 10000, height, 0);
-  println("mixQ="+mix_Q);
+  float maxMIX = +1000;
+  float minMIX = -1000;
+
+  mix_I = map(mix[0], minMIX, maxMIX, height, 0);
+  print("N= " + totalNumber + " mixI=" + mix_I);  
+  mix_Q = map(mix[1], minMIX, maxMIX, height, 0);
+  println(" mixQ=" + mix_Q);
 
   switch(option) {
   case 0:
@@ -105,7 +117,7 @@ void PSD(int option) {
     I_filter_out = a*mix_I + b*I_prev_filter;
     Q_filter_out = a*mix_Q + b*Q_prev_filter;
     filter_out=sqrt(I_filter_out * I_filter_out + Q_filter_out * Q_filter_out);  //Magnitude
-    println("mag");
+//    println("mag");
     fill(0);
     noStroke();
     rect(0, 0, width/2, 20);
@@ -118,7 +130,7 @@ void PSD(int option) {
   case 1:
     prev_filter=filter_out;
     filter_out=a*mix_I+b*prev_filter;
-    println("in phase");
+//    println("in phase");
     fill(0);
     noStroke();
     rect(0, 0, width, 20);
@@ -130,7 +142,7 @@ void PSD(int option) {
   case 2:
     prev_filter=filter_out;
     filter_out=a*mix_Q+b*prev_filter;
-    println("Quadature");
+//    println("Quadature");
     fill(0);
     noStroke();
     rect(0, 0, width, 20);
@@ -147,7 +159,7 @@ void PSD(int option) {
     Q_filter_out=a*mix_Q+b*Q_prev_filter;
 
     filter_out=atan(Q_filter_out/I_filter_out)*360/6.42;
-    println("phase= "+filter_out);
+ //   println("phase= "+filter_out);
 
     fill(0);
     noStroke();
