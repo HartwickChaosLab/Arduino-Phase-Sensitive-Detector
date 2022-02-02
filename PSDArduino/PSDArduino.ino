@@ -34,11 +34,12 @@
 
 //Modified by FLE 20220130
 // Download from:
-//Add sync pin output to trigger Oscilliscope on oscillator output
+//Add sync pin 8 output to trigger Oscilliscope on oscillator output
 //Change variable types for sin/cos function table.
 // 20220131 /Move sine and cosine into PROGMEM
 // 20220201 Clean up comments
 // Mul by 7.8125 to make mV.
+// Add a syncQ output on pin 7.
 
 #include <avr/interrupt.h>
 
@@ -51,7 +52,9 @@ const int inputOFFSET = 2.39 * 1023 / 4.80; //Measured on Resistive devider inpu
 #define REC_LENGTH 256                //Input signal array length
 #define LENGTH 256                    //Sine Cosine table array length
 
-const int syncPin = 8;
+const int syncPin = 8;  //Inphase sync
+const int syncQPin = 7;  //Qphase sync
+
 //const int myINPUT = 0;
 const int myINPUT = A2;    //OctoUNO J1Pin1 input wire White/Orange
 
@@ -83,8 +86,14 @@ int signal[REC_LENGTH]; // Captures Signal Data into array
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200); ////FLE Make Faster
+  delay(100);
+  Serial.println("ImV, QmV");       //Set scale for serial ploter
   pinMode(syncPin, OUTPUT);         //Setup a pin for sync signal output
   digitalWrite(syncPin, HIGH);
+  pinMode(syncQPin, OUTPUT);         //Setup a pin for sync Q signal output
+  digitalWrite(syncQPin, HIGH);
+
+  
 
 #if FASTADC
   // set prescale to 16
@@ -93,7 +102,7 @@ void setup() {
   cbi(ADCSRA, ADPS0) ;
 #endif
 
-  Serial.println(sizeof(wave_I) / sizeof(wave_I[0]));
+//  Serial.println(sizeof(wave_I) / sizeof(wave_I[0]));
 
   pinMode(9, OUTPUT); //this is going to be where PWM signal comes out. Then goes to LPF.
   TCCR1B = (1 << CS10); //Timer runs at 16MHz
@@ -113,6 +122,7 @@ void setup() {
   sei();//enable interupts
   establishContact();             //Wait for serial command from controller.
   digitalWrite(syncPin, LOW);
+  digitalWrite(syncQPin, LOW);
 }// end setup()
 
 void loop() {
@@ -153,18 +163,24 @@ ISR(TIMER2_COMPA_vect) { // Called when TCNT2 == OCR2A
   //asm(“NOP;NOP”); // Fine tuning
   TCNT2 = 12; // Timing to compensate for ISR run time
   //Sync signal for oscilliscope. This will have zero phase delay (otherwise due to continious time LPF).
-  if (index == 0) {
+  if (index == 0) { 
     digitalWrite(syncPin, HIGH);
+  }
+  if (index ==   LENGTH /4) {
+    digitalWrite(syncQPin, HIGH);
   }
   if (index ==   LENGTH / 2) {
     digitalWrite(syncPin, LOW);
+  }
+  if (index ==   LENGTH * 3/4) {
+    digitalWrite(syncQPin, LOW);
   }
 }//end ISR
 
 //Wait for any character from controller to start data
 void establishContact() {
   while (Serial.available() <= 0) {
-    Serial.println("0,0");   // send an initial string
     delay(300);
+    Serial.println("2.5,0");   // send an initial string    
   }
 }// end establishContact()

@@ -1,24 +1,24 @@
 /*Get user input from keyboard and mouse
  Copyright (C) {2014}  Kevin D. Schultz
-//
-//    This program is free software: you can redistribute it and/or modify
-//    it under the terms of the GNU General Public License as published by
-//    the Free Software Foundation, either version 3 of the License, or
-//    (at your option) any later version.
-//
-//    This program is distributed in the hope that it will be useful,
-//    but WITHOUT ANY WARRANTY; without even the implied warranty of
-//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//    GNU General Public License for more details.
-//
-//    You should have received a copy of the GNU General Public License
-//    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+ //
+ //    This program is free software: you can redistribute it and/or modify
+ //    it under the terms of the GNU General Public License as published by
+ //    the Free Software Foundation, either version 3 of the License, or
+ //    (at your option) any later version.
+ //
+ //    This program is distributed in the hope that it will be useful,
+ //    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ //    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ //    GNU General Public License for more details.
+ //
+ //    You should have received a copy of the GNU General Public License
+ //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
 /*
  Modifyed by FLE 20220130
  Broken into tabs 20220130.
-
-*/
+ 
+ */
 
 
 /*  Key  Action
@@ -34,17 +34,33 @@
 void keyReleased()
 {
   //println("key: "+key+" keyCode: "+keyCode);  //For key development
-  
+
+  if (key=='a'||key=='A')
+  {
+    //Send data
+    myPort.write("A"); //Tell Arduino UNO to start another aquizition.
+  }
   if (key=='z'||key=='Z')
   {
     TC--;
     println(TC);
   }
-  if (key=='x'||key=='X')
+    if (key=='r'||key=='R')
+  {
+    TC =0;
+    println(TC);
+  }
+  
+  if (key=='X')
   {
     TC++;
     println(TC);
-  }  
+  }
+  if (key=='X')
+  {
+    TC += 10;
+    println(TC);
+  }
   if (key=='i'||key=='I')
   {
     choice=1;
@@ -66,7 +82,6 @@ void keyReleased()
     background(0);
     graphPosition=0;
   }
-
 }// end keyrelease() 
 
 
@@ -82,7 +97,7 @@ void mousePressed()
     graphPosition=0;
     println("Right pressed.");
   } else if (mouseButton == CENTER) {
-    println("Center pressed.\n");    
+    println("Center pressed.\n");
   } else {  
     println("Mouse but no button.\n");
     // No action
