@@ -17,17 +17,24 @@
 /*
  Modifyed by FLE 20220130
  Broken into tabs 20220130.
+ Add X to increase TC by ten. Add R to reset time constant.
+ Add L and U command to lock and unlock oscillator 20220202
  
  */
 
 
 /*  Key  Action
  z    decress TC
- x    increase TC
+ x    increase TC one
+ X    increase TC by ten
+ r    reset TC to one
  i    Inphase
  m    Magnatude
  p    Phase
  q    Quadrature
+ l    Lock
+ u    unlock
+ a    Start data from UNO
  
  */
 
@@ -40,17 +47,27 @@ void keyReleased()
     //Send data
     myPort.write("A"); //Tell Arduino UNO to start another aquizition.
   }
+    if (key=='l'||key=='L')
+  {
+    //Lock to phase
+    myPort.write("L"); //Tell Arduino UNO to lock to phase
+  }
+    if (key=='u'||key=='U')
+  {
+    //Unlock oscillator 
+    myPort.write("U"); //Tell Arduino UNO to unlock the oscillator
+  }
   if (key=='z'||key=='Z')
   {
     TC--;
     println(TC);
   }
-    if (key=='r'||key=='R')
+  if (key=='r'||key=='R')
   {
     TC =0;
     println(TC);
   }
-  
+
   if (key=='X')
   {
     TC++;
@@ -89,7 +106,6 @@ void keyReleased()
 
 void mousePressed()
 {
-  saveFrame("Snap.png");
   if (mouseButton == LEFT) {  
     println("Left pressed.");
   } else if (mouseButton == RIGHT) {
@@ -97,7 +113,8 @@ void mousePressed()
     graphPosition=0;
     println("Right pressed.");
   } else if (mouseButton == CENTER) {
-    println("Center pressed.\n");
+    println("Center pressed.  Making Snap.png.\n");
+    saveFrame("Snap.png");
   } else {  
     println("Mouse but no button.\n");
     // No action
